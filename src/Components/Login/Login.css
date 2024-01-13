@@ -8,7 +8,7 @@
 }
 
 .left-container {
-  flex: 30%;
+  flex: 20%;
   height: 600px;
   padding: 20px;
   margin-top: 95px;
@@ -46,7 +46,7 @@
 }
 
 .right-container {
-  flex: 75%;
+  flex: 80%;
   padding: 20px;
   margin-top: 35px;
   margin-bottom: 50px;
