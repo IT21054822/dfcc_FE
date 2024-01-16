@@ -121,7 +121,9 @@ input {
 }
 
 button:hover {
-  background-color: rgb(249, 103, 103);
+  background-color: #d62424;
+  box-shadow: #d62424 0px 7px 29px 0px;
+
 }
 
 .submit-container {
