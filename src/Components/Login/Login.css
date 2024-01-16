@@ -48,6 +48,7 @@
 .right-container {
   flex: 80%;
   padding: 20px;
+  height: 93vh;
   margin-top: 35px;
   margin-bottom: 50px;
   margin-left: -20px; 
