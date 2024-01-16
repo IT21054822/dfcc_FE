@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Table.css'
 import bg10 from '../../assets/backHome.jpg'
+import * as XLSX from 'xlsx';
 
 
 interface RowData {
@@ -66,6 +67,13 @@ const Table: React.FC = () => {
   const handleDatePickerChange = (date: Date | null) => {
     setSelectedDate(date);
   };
+  const handleDownload = () => {
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
+    const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
+    const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8' });
+    XLSX.writeFile(workbook, 'table.xlsx');
+  };
 
   return (
     <div className="container-Home" style={{backgroundImage:`url(${bg10})`, backgroundPosition: 'center', backgroundSize:'cover'}}>
@@ -80,7 +88,7 @@ const Table: React.FC = () => {
           />
         </div>
         <button className='btnVD'>View</button>
-      <button className='btnVD'>Download</button>
+      <button onClick={handleDownload} className='btnVD'>Download</button>
       </div>
       <table>
         <thead>

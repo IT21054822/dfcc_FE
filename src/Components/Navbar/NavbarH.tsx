@@ -10,7 +10,9 @@ function NavbarH() {
             <li><Link to='/Home' className='towhiteN'>Home</Link></li>
             <li><Link to='/Activity' className='towhiteN'>Activity</Link></li>
             <li><Link to='/Form' className='towhiteN'>Form</Link></li>
+            <li><Link to='/Analysis' className='towhiteN'>Analysis</Link></li>
             <li><Link to='/' className='towhiteN'>Logout</Link></li>
+            
         </ul>
         <img src={logoN} alt="" className='logo_c' />
         

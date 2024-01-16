@@ -16,6 +16,9 @@ const Navbar: React.FC = () => {
       else if(currentPath === '/Form'){
         return <HomeNavbar />;
       }
+      else if(currentPath === '/Analysis'){
+        return <HomeNavbar />;
+      }
       
     };
   
